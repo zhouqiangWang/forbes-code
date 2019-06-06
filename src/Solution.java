@@ -12,6 +12,9 @@ public class Solution {
 //        PrintWriter pw = new PrintWriter(new FileWriter(FILE_OUTPUT));
         PrintWriter pw = new PrintWriter(System.out);
 
+        PriorityQueue<int[]> maxHeap = new PriorityQueue<>((o1, o2) -> (o2[0]*o2[0] + o2[1]*o2[1]) - (o1[0]*o1[0] - o1[1]*o1[1]));
+        maxHeap.isEmpty();
+
         int[][] matrix = new int[2][3];
         int[][] dirs = new int[][]{ {1, 2, 3}, {4, 5, 6} };
         pw.println(dirs.length);

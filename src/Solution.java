@@ -1,4 +1,7 @@
+import org.apache.commons.codec.binary.Hex;
+
 import java.io.*;
+import java.math.BigInteger;
 import java.util.*;
 
 public class Solution {
@@ -14,6 +17,8 @@ public class Solution {
 
         PriorityQueue<int[]> maxHeap = new PriorityQueue<>((o1, o2) -> (o2[0]*o2[0] + o2[1]*o2[1]) - (o1[0]*o1[0] - o1[1]*o1[1]));
         maxHeap.isEmpty();
+
+
 
         int[][] matrix = new int[2][3];
         int[][] dirs = new int[][]{ {1, 2, 3}, {4, 5, 6} };
@@ -95,6 +100,19 @@ public class Solution {
 
             pw.println("Case #" + i + ": " + minX + " " + minY);
         }
+
+        byte[] test = new byte[]{1};
+        byte[] test2 = new byte[]{8, 6, 12, 11, 13, 1, 2, 3, 4, 5, 6};
+        byte[] test3 = new byte[]{1, 127};
+        BigInteger bigTest = new BigInteger(test);
+        pw.println(bigTest.intValue());
+        BigInteger bigTest2 = new BigInteger(test2);
+        pw.println(bigTest2.intValue());
+
+        pw.println(Hex.encodeHex(test2));
+        pw.println(Arrays.toString(test2));
+        pw.println(Hex.encodeHex(test3));
+        pw.println(Arrays.toString(test3));
 
         pw.flush();
         pw.close();

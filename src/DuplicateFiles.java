@@ -173,6 +173,25 @@ public class DuplicateFiles {
 //        File file = new File("./");
         DuplicateFiles instance = new DuplicateFiles("/Users/zhouqiangw/Desktop/duptest/dup/test");
         pw.println(instance.findStr("45"));
+        int[][] board = new int[3][2];
+        board[0][0] = 1;
+        board[0][1] = 2;
+        board[1][0] = 3;
+        board[1][1] = 4;
+        board[2][0] = 5;
+
+        File file = new File("./");
+
+        Map<String, String> map = new HashMap<>();
+
+        FileInputStream is = new FileInputStream(file);
+        pw.println(Arrays.toString(board[0]));
+        board[0] = board[1];
+        board[1] = new int[2];
+        pw.println(Arrays.toString(board[0]));
+        board[1][0] = 10;
+        pw.println(Arrays.toString(board[0]));
+        pw.println(Arrays.toString(board[1]));
 
         pw.flush();
         pw.close();

@@ -69,7 +69,20 @@ public class DataStructure {
         pw.println(random.nextInt());
         pw.println(Integer.MAX_VALUE);
         set.iterator();
-
+        Integer integer = 2;
+        integer.intValue();
+        String.join("[.]", strs);
+        pw.println(Arrays.toString(strs));
+        StringBuilder builder = new StringBuilder();
+        Arrays.sort(strs, (s1, s2) -> s1.charAt(0) - s2.charAt(0));
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>((o1, o2) -> o1 - o2);
+        minHeap.poll();
+        long a = 10;
+        int b = Integer.MIN_VALUE;
+        map.keySet();
+        list.sort(((o1, o2) -> o1 - o2));
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
+        treeMap.floorEntry(1);
 
         pw.flush();
         pw.close();

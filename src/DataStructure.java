@@ -83,6 +83,11 @@ public class DataStructure {
         list.sort(((o1, o2) -> o1 - o2));
         TreeMap<Integer, Integer> treeMap = new TreeMap<>();
         treeMap.floorEntry(1);
+        TreeMap<Integer, Integer>[] array = new TreeMap[10];
+        Collections.reverse(list);
+        pw.println(302 % 20);
+        map.values();
+        "sa".toCharArray();
 
         pw.flush();
         pw.close();

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class DataStructure {
     private static final String FILE_INPUT = System.getProperty("user.dir") + "/src/input.txt";
@@ -88,6 +89,22 @@ public class DataStructure {
         pw.println(302 % 20);
         map.values();
         "sa".toCharArray();
+        queue.offer(1);
+        queue.poll();
+        map.putIfAbsent('c', 1);
+        list.stream().collect(Collectors.toList());
+        queue.poll();
+//        stack.push()
+//        set.contains()
+        list.get(0);
+        PriorityQueue<int[]> maxHeap = new PriorityQueue<>();
+        Map.Entry<Character, Integer> entry;
+//        entry.getValue();
+        PriorityQueue<Map.Entry<Character, Integer>> priorityQueue = new PriorityQueue<>();
+        priorityQueue.addAll(map.entrySet());
+        maxHeap.peek();
+//        String.valueOf()
+        map.keySet();
 
         pw.flush();
         pw.close();

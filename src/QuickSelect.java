@@ -13,17 +13,11 @@ class QuickSelect {
         int l = start + 1;
         int r = end;
         while (l <= r) {
-            while (nums[l] >= pivot && l < end) {
+            if (nums[l] >= pivot) {
                 l++;
-            }
-            while (r > start && nums[r] < pivot) {
-                r--;
-            }
-            if (l < r) {
+            } else {
                 swap(nums, l, r);
-            }
-            if (l == r) {
-                break;
+                r--;
             }
         }
 

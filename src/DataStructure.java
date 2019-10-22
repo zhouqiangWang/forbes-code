@@ -3,8 +3,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.math.BigInteger;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
+
+import static java.util.Calendar.MONTH;
 
 public class DataStructure {
     private static final String FILE_INPUT = System.getProperty("user.dir") + "/src/input.txt";
@@ -96,15 +99,31 @@ public class DataStructure {
         queue.poll();
 //        stack.push()
 //        set.contains()
-        list.get(0);
+//        list.get(0);
         PriorityQueue<int[]> maxHeap = new PriorityQueue<>();
         Map.Entry<Character, Integer> entry;
 //        entry.getValue();
         PriorityQueue<Map.Entry<Character, Integer>> priorityQueue = new PriorityQueue<>();
-        priorityQueue.addAll(map.entrySet());
+//        priorityQueue.addAll(map.entrySet());
         maxHeap.peek();
 //        String.valueOf()
         map.keySet();
+        pw.println(1<<31);
+        pw.println(Math.abs((long)1<<31));
+        pw.println(Arrays.toString(new int[0]));
+        int[][] arr2 = {{0, 2}, {1, 3}, {2, 4}};
+        int[] tmp = arr2[1];
+        pw.println(arr2[1]);
+        arr2[1] = arr2[2];
+        pw.println(arr2[1]);
+        pw.println(arr2[2]);
+        arr2[2] = tmp;
+        pw.println(Arrays.toString(arr2));
+
+        Date d=new Date();
+        SimpleDateFormat sdf=new SimpleDateFormat("MMMMMMM",Locale.US);
+        pw.println(Calendar.getInstance().getDisplayName(MONTH, Calendar.LONG, Locale.US));
+        pw.println(sdf.format(d));
 
         pw.flush();
         pw.close();

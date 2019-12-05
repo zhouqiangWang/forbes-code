@@ -124,6 +124,12 @@ public class DataStructure {
         SimpleDateFormat sdf=new SimpleDateFormat("MMMMMMM",Locale.US);
         pw.println(Calendar.getInstance().getDisplayName(MONTH, Calendar.LONG, Locale.US));
         pw.println(sdf.format(d));
+        pw.println(1<<31);
+        pw.println(3>>1);
+        pw.println(Long.MIN_VALUE);
+        pw.println(List.of("()"));
+        List<String> zero = Arrays.asList("");
+        boolean[] rowIn = new boolean[9];
 
         pw.flush();
         pw.close();

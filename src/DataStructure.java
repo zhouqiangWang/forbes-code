@@ -130,6 +130,9 @@ public class DataStructure {
         pw.println(List.of("()"));
         List<String> zero = Arrays.asList("");
         boolean[] rowIn = new boolean[9];
+        String str = "test";
+        sb.reverse().toString();
+        String.valueOf(12);
 
         pw.flush();
         pw.close();

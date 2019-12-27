@@ -1,6 +1,8 @@
-import org.apache.commons.codec.binary.Hex;
 
-import java.io.*;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.util.*;
 
@@ -109,9 +111,9 @@ public class Solution {
         BigInteger bigTest2 = new BigInteger(test2);
         pw.println(bigTest2.intValue());
 
-        pw.println(Hex.encodeHex(test2));
+//        pw.println(Hex.encodeHex(test2));
         pw.println(Arrays.toString(test2));
-        pw.println(Hex.encodeHex(test3));
+//        pw.println(Hex.encodeHex(test3));
         pw.println(Arrays.toString(test3));
 
         pw.flush();

@@ -133,6 +133,15 @@ public class DataStructure {
         String str = "test";
         sb.reverse().toString();
         String.valueOf(12);
+        pw.println(Character.forDigit(1, 10));
+        pw.println((int)Math.pow(2, 3));
+        int[][] dirs = {{1, 2}, {3, 4}};
+        Arrays.sort(dirs, (d1, d2) -> d1[0] - d2[0]);
+        pw.println(str);
+        pw.println(str.substring(0, 1));
+        Queue<int[]> queue2 = new LinkedList<>();
+        queue2.offer(new int[]{b, b});
+        Arrays.fill(twoDarr, 1);
 
         pw.flush();
         pw.close();

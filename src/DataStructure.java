@@ -141,11 +141,38 @@ public class DataStructure {
         pw.println(str.substring(0, 1));
         Queue<int[]> queue2 = new LinkedList<>();
         queue2.offer(new int[]{b, b});
-        Arrays.fill(twoDarr, 1);
+        double[][] twoDouble = new double[2][2];
+        Arrays.fill(twoDarr[1], 2);
+        pw.println(twoDarr[1][1]);
+        str.charAt(0);
+        map.remove(0);
+        stack.peek();
+        pw.println(str);
+        StringBuilder builder2 = new StringBuilder(str);
+        builder2.reverse().append('a').append(str);
+        pw.println(builder2.toString());
+        builder2.deleteCharAt(builder2.length() - 1);
+        str.toCharArray();
+        pw.println(1e-6);
+        str.toCharArray();
 
         pw.flush();
         pw.close();
         sc.close();
+
+        Thread n = new Thread();
+        n.run();
+
+        try {
+
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+        }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }
 

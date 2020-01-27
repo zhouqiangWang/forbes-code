@@ -155,6 +155,25 @@ public class DataStructure {
         str.toCharArray();
         pw.println(1e-6);
         str.toCharArray();
+        int i = 7;
+        pw.println(" i = " + i);
+        pw.println("i(2) = " + Integer.toBinaryString(i));
+        pw.println("-i(2) = " + Integer.toBinaryString(-i));
+
+        pw.println(" (-i & i) = " + (-i & i));
+        pw.println(" (-i ^ i) = " + (i ^ -i));
+        pw.println(" Integer.MAX = " + Integer.toBinaryString(Integer.MAX_VALUE));
+        pw.println(" Integer.MIN = " + Integer.toBinaryString(Integer.MIN_VALUE));
+
+        pw.println("\tasda".lastIndexOf("\t"));
+        pw.println("sda".lastIndexOf("\t"));
+        Deque<Integer> deque = new ArrayDeque<>();
+        deque.addLast(10);
+        deque.addLast(11);
+        pw.println(deque.getFirst());
+        pw.println(deque.size());
+        pw.println(deque.pollFirst());
+        pw.println(deque.size());
 
         pw.flush();
         pw.close();

@@ -1,8 +1,7 @@
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.io.PrintWriter;
-import java.math.BigInteger;
+import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -85,9 +84,10 @@ public class DataStructure {
         int b = Integer.MIN_VALUE;
         map.keySet();
         list.sort(((o1, o2) -> o1 - o2));
-        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>(Comparator.comparingInt(a2 -> a2));
         treeMap.floorEntry(1);
         TreeMap<Integer, Integer>[] array = new TreeMap[10];
+
         Collections.reverse(list);
         pw.println(302 % 20);
         map.values();
@@ -96,6 +96,7 @@ public class DataStructure {
         queue.poll();
         map.putIfAbsent('c', 1);
         list.stream().collect(Collectors.toList());
+
         queue.poll();
 //        stack.push()
 //        set.contains()
@@ -174,6 +175,23 @@ public class DataStructure {
         pw.println(deque.size());
         pw.println(deque.pollFirst());
         pw.println(deque.size());
+        random.nextInt(1);
+        stack.peek();
+
+        map.keySet();
+
+        pw.println(str instanceof String);
+        pw.println((int)'a');
+        pw.println((int)'z');
+        LinkedList<Integer> linkedList = new LinkedList<>();
+
+        linkedList.add(1);
+        linkedList.add(2);
+        linkedList.add(3);
+        pw.println(linkedList.listIterator(1).previous());
+        str.toLowerCase();
+        ArrayList<String[]> bucket[] = new ArrayList[0];
+
 
         pw.flush();
         pw.close();

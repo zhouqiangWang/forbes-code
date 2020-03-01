@@ -1,8 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
-
-public class NetworkRank {
+public class MS_NetworkRank {
     int getMax(int[] A, int[] B, int N) {
         int[] memo = new int[N+1];
 
@@ -19,7 +15,7 @@ public class NetworkRank {
     }
 
     public static void main(String[] args) {
-        NetworkRank ins = new NetworkRank();
+        MS_NetworkRank ins = new MS_NetworkRank();
         System.out.println(ins.getMax(new int[]{1, 2, 3, 3}, new int[]{2, 3, 1, 4}, 4));
     }
 }

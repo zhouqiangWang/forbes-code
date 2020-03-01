@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class MinDeletions {
+public class MS_MinDeletions {
 
     int getMinDeletions(String s) {
         int res = 0;
@@ -29,7 +29,7 @@ public class MinDeletions {
     }
 
     public static void main(String[] args) {
-        MinDeletions ins = new MinDeletions();
+        MS_MinDeletions ins = new MS_MinDeletions();
 
         System.out.println(ins.getMinDeletions("eeeeffff"));
         System.out.println(ins.getMinDeletions("aabbffddeaee"));

@@ -1,4 +1,4 @@
-public class MinMoveWithout3 {
+public class MS_MinMoveWithout3 {
     int getMinMove(String str) {
         int res = 0;
 
@@ -32,7 +32,7 @@ public class MinMoveWithout3 {
     }
 
     public static void main(String[] args) {
-        MinMoveWithout3 ins = new MinMoveWithout3();
+        MS_MinMoveWithout3 ins = new MS_MinMoveWithout3();
         System.out.println(ins.getMinMove("ababa"));
         System.out.println(ins.getMinMove("baaaaa"));
         System.out.println(ins.getMinMove("baaabbaabbbba"));

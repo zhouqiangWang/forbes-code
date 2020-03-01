@@ -1,4 +1,4 @@
-public class MinimumAdjacentSwapPalindrome {
+public class MS_MinimumAdjacentSwapPalindrome {
 
     int getMinSwap(String s) {
         int[] counter = new int[26];
@@ -51,7 +51,7 @@ public class MinimumAdjacentSwapPalindrome {
     }
 
     public static void main(String[] args) {
-        MinimumAdjacentSwapPalindrome ins = new MinimumAdjacentSwapPalindrome();
+        MS_MinimumAdjacentSwapPalindrome ins = new MS_MinimumAdjacentSwapPalindrome();
 
         System.out.println(ins.getMinSwap("mamad"));
         System.out.println(ins.getMinSwap("asflkj"));

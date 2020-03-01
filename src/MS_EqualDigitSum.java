@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class EqualDigitSum {
+public class MS_EqualDigitSum {
     public int solution(int[] A) {
         int res = -1;
 
@@ -42,7 +42,7 @@ public class EqualDigitSum {
     }
 
     public static void main(String[] args) {
-        EqualDigitSum ins = new EqualDigitSum();
+        MS_EqualDigitSum ins = new MS_EqualDigitSum();
 
         System.out.println(ins.solution(new int[]{51, 71, 17, 42}));
         System.out.println(ins.solution(new int[]{42, 33, 60}));

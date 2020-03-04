@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MS_MaxPossibleValue {
     public static int maximumPossibleValue(int N) {
         // write your code here
@@ -16,6 +18,7 @@ public class MS_MaxPossibleValue {
             sb.insert(idx, 5);
         }
         int val = Integer.parseInt(sb.toString());
+//        Arrays.asList()
         return flag * val;
     }
 

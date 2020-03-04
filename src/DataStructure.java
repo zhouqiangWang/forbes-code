@@ -56,6 +56,8 @@ public class DataStructure {
         "sda".toCharArray();
         StringBuilder sb = new StringBuilder();
 //        map.getOrDefault();
+        sb.append(1);
+        pw.println(sb.charAt(0));
 
         String[] strs = "1,2,3,4,11,12,13,".split(",");
 
@@ -101,12 +103,12 @@ public class DataStructure {
 //        stack.push()
 //        set.contains()
 //        list.get(0);
-        PriorityQueue<int[]> maxHeap = new PriorityQueue<>();
+//        PriorityQueue<int[]> maxHeap = new PriorityQueue<>();
         Map.Entry<Character, Integer> entry;
 //        entry.getValue();
         PriorityQueue<Map.Entry<Character, Integer>> priorityQueue = new PriorityQueue<>();
 //        priorityQueue.addAll(map.entrySet());
-        maxHeap.peek();
+//        maxHeap.peek();
 //        String.valueOf()
         map.keySet();
         pw.println(1<<31);
@@ -191,6 +193,13 @@ public class DataStructure {
         pw.println(linkedList.listIterator(1).previous());
         str.toLowerCase();
         ArrayList<String[]> bucket[] = new ArrayList[0];
+        pw.println((char)('a' + 1));
+        pw.println(sb.charAt(0));
+
+        PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a2,b2) -> b2[0] - a2[0]);
+        maxHeap.add(new int[]{6, 0});
+        maxHeap.add(new int[]{1, 1});
+        maxHeap.add(new int[]{1, 2});
 
 
         pw.flush();

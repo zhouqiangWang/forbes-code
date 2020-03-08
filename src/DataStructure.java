@@ -1,7 +1,6 @@
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
-import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -100,17 +99,6 @@ public class DataStructure {
         list.stream().collect(Collectors.toList());
 
         queue.poll();
-//        stack.push()
-//        set.contains()
-//        list.get(0);
-//        PriorityQueue<int[]> maxHeap = new PriorityQueue<>();
-        Map.Entry<Character, Integer> entry;
-//        entry.getValue();
-        PriorityQueue<Map.Entry<Character, Integer>> priorityQueue = new PriorityQueue<>();
-//        priorityQueue.addAll(map.entrySet());
-//        maxHeap.peek();
-//        String.valueOf()
-        map.keySet();
         pw.println(1<<31);
         pw.println(Math.abs((long)1<<31));
         pw.println(Arrays.toString(new int[0]));
@@ -131,20 +119,17 @@ public class DataStructure {
         pw.println(3>>1);
         pw.println(Long.MIN_VALUE);
         pw.println(List.of("()"));
-        List<String> zero = Arrays.asList("");
-        boolean[] rowIn = new boolean[9];
         String str = "test";
         sb.reverse().toString();
         String.valueOf(12);
         pw.println(Character.forDigit(1, 10));
         pw.println((int)Math.pow(2, 3));
         int[][] dirs = {{1, 2}, {3, 4}};
-        Arrays.sort(dirs, (d1, d2) -> d1[0] - d2[0]);
+        Arrays.sort(dirs, Comparator.comparingInt(d2 -> d2[0]));
         pw.println(str);
         pw.println(str.substring(0, 1));
         Queue<int[]> queue2 = new LinkedList<>();
         queue2.offer(new int[]{b, b});
-        double[][] twoDouble = new double[2][2];
         Arrays.fill(twoDarr[1], 2);
         pw.println(twoDarr[1][1]);
         str.charAt(0);
@@ -155,9 +140,7 @@ public class DataStructure {
         builder2.reverse().append('a').append(str);
         pw.println(builder2.toString());
         builder2.deleteCharAt(builder2.length() - 1);
-        str.toCharArray();
         pw.println(1e-6);
-        str.toCharArray();
         int i = 7;
         pw.println(" i = " + i);
         pw.println("i(2) = " + Integer.toBinaryString(i));
@@ -192,7 +175,6 @@ public class DataStructure {
         linkedList.add(3);
         pw.println(linkedList.listIterator(1).previous());
         str.toLowerCase();
-        ArrayList<String[]> bucket[] = new ArrayList[0];
         pw.println((char)('a' + 1));
         pw.println(sb.charAt(0));
 
@@ -201,19 +183,22 @@ public class DataStructure {
         maxHeap.add(new int[]{1, 1});
         maxHeap.add(new int[]{1, 2});
 
+        Boolean[][] memo = new Boolean[2][2];
+        memo[0][0] = true;
+        pw.println(memo[0][0]);
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.YEAR, 2018);
+        calendar.set(MONTH, Calendar.OCTOBER);
+//        calendar.set(Calendar.DAY_OF_MONTH, 1);
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.TUESDAY);
+        pw.println(calendar.get(MONTH));
+        pw.println(calendar.get(Calendar.DAY_OF_WEEK));
+        pw.println("second Tuesday - " + (calendar.get(Calendar.DAY_OF_MONTH) + 7));
+        pw.println(calendar.getTime());
 
         pw.flush();
         pw.close();
         sc.close();
-
-        Thread n = new Thread();
-        n.run();
-
-        try {
-
-        } catch (Exception e) {
-            System.out.print(e.getMessage());
-        }
     }
 
     @Override

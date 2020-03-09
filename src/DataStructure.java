@@ -195,6 +195,13 @@ public class DataStructure {
         pw.println(calendar.get(Calendar.DAY_OF_WEEK));
         pw.println("second Tuesday - " + (calendar.get(Calendar.DAY_OF_MONTH) + 7));
         pw.println(calendar.getTime());
+        Set<List<Integer>> set2 = new HashSet<>();
+        set2.add(List.of(1, 2, 3));
+        List<Integer> arrr = List.of(1, 2, 3);
+        pw.println(set2.contains(arrr));
+        pw.println(arrr.equals(List.of(1, 2, 3)));
+        pw.println( arrr.indexOf(2));
+
 
         pw.flush();
         pw.close();

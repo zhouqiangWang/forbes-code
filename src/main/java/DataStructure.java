@@ -3,6 +3,7 @@ import java.io.FileReader;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 import static java.util.Calendar.MONTH;
@@ -201,6 +202,34 @@ public class DataStructure {
         pw.println(set2.contains(arrr));
         pw.println(arrr.equals(List.of(1, 2, 3)));
         pw.println( arrr.indexOf(2));
+        pw.println(Integer.bitCount(3));
+        char[] chs = new char[] {'a', 'b', 'c', 'd'};
+        sb = new StringBuilder();
+        sb.append(chs, 0, 2);
+        pw.println(sb.toString());
+        Queue<List<Long>> heap = new PriorityQueue<>((a1, b1) -> (int)(b1.get(0) - a1.get(0)));
+        pw.printf("%x\n", Long.reverse(1)>>32 & 0xFFFFFFFFL);
+        pw.printf("sequence = %x\n", 1000001234l | 0x100000000L & 0x1FFFFFFFFL);
+        pw.println(Long.reverse(80000000L << 32));
+        pw.println(map.get(a));
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        Iterator<Integer> iter = list.iterator();
+        List.of(1).iterator();
+        while (iter.hasNext()) {
+            pw.println(iter.next());
+        }
+        pw.println(System.currentTimeMillis());
+        queue.add(1);
+        pw.println(queue);
+        pw.println(queue.remove());
+        pw.println(queue);
+        AtomicInteger atomicInteger = new AtomicInteger();
+        pw.println(atomicInteger.get());
+        atomicInteger.getAndAdd(100);
+        pw.println(atomicInteger.addAndGet(23));
+
 
 
         pw.flush();

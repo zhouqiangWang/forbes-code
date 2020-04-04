@@ -10,6 +10,15 @@ public class Solution {
     private static final String FILE_INPUT = System.getProperty("user.dir") + "/src/input.txt";
     private static final String FILE_OUTPUT = "output.txt";
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
 
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(new FileReader(FILE_INPUT));
@@ -110,6 +119,7 @@ public class Solution {
         pw.println(bigTest.intValue());
         BigInteger bigTest2 = new BigInteger(test2);
         pw.println(bigTest2.intValue());
+
 
 //        pw.println(Hex.encodeHex(test2));
         pw.println(Arrays.toString(test2));

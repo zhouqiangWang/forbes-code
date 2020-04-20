@@ -231,6 +231,7 @@ public class DataStructure {
         pw.println(atomicInteger.addAndGet(23));
         pw.println(atomicInteger);
         pw.println("ABC".compareTo("BCD"));
+        pw.println((char)('z' + 1));
 
 
         pw.flush();

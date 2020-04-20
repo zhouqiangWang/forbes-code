@@ -9,16 +9,18 @@ public class A_TopKReview {
 
         for (String review : reviews) {
             String[] words = review.split("\\W");
+            Set<String> seen = new HashSet<>();
             for (String word : words) {
                 word = word.toLowerCase();
-                if (set.contains(word)) {
+                if (set.contains(word) && !seen.contains(word)) {
                     frequentMap.put(word, frequentMap.getOrDefault(word, 0) + 1);
+                    seen.add(word);
                 }
             }
         }
         PriorityQueue<Map.Entry<String, Integer>> minHeap =
                 new PriorityQueue<>((entry1, entry2) -> entry1.getValue() - entry2.getValue() == 0 ?
-                        entry1.getKey().compareTo(entry2.getKey()) :
+                        entry2.getKey().compareTo(entry1.getKey()) :
                         entry1.getValue() - entry2.getValue());
 
         for (Map.Entry<String, Integer> entry : frequentMap.entrySet()) {

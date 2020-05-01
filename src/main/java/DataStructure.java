@@ -119,7 +119,6 @@ public class DataStructure {
         pw.println(1<<31);
         pw.println(3>>1);
         pw.println(Long.MIN_VALUE);
-        pw.println(List.of("()"));
         String str = "test";
         sb.reverse().toString();
         String.valueOf(12);
@@ -197,11 +196,6 @@ public class DataStructure {
         pw.println("second Tuesday - " + (calendar.get(Calendar.DAY_OF_MONTH) + 7));
         pw.println(calendar.getTime());
         Set<List<Integer>> set2 = new HashSet<>();
-        set2.add(List.of(1, 2, 3));
-        List<Integer> arrr = List.of(1, 2, 3);
-        pw.println(set2.contains(arrr));
-        pw.println(arrr.equals(List.of(1, 2, 3)));
-        pw.println( arrr.indexOf(2));
         pw.println(Integer.bitCount(3));
         char[] chs = new char[] {'a', 'b', 'c', 'd'};
         sb = new StringBuilder();
@@ -216,7 +210,6 @@ public class DataStructure {
         list.add(2);
         list.add(3);
         Iterator<Integer> iter = list.iterator();
-        List.of(1).iterator();
         while (iter.hasNext()) {
             pw.println(iter.next());
         }
@@ -232,12 +225,43 @@ public class DataStructure {
         pw.println(atomicInteger);
         pw.println("ABC".compareTo("BCD"));
         pw.println((char)('z' + 1));
+        LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet<>();
+        linkedHashSet.iterator().hasNext();
+        String[] strings = new String[]{"ab", "cd", "vd"};
+        Arrays.sort(strings, (s1, s2) -> {
+            int s1Space = s1.indexOf(" ");
+            int s2Space = s2.indexOf(" ");
+            int s1Char = s1.charAt(s1Space);
+            int s2Char = s2.charAt(s2Space);
+
+            if (s1Char < '9') {
+                return 1;
+            }
+            if (s2Char < '9') {
+                return -1;
+            }
+            int logDiff = s1.substring(s1Space + 1).compareTo(s2.substring(s2Space + 1));
+            if (logDiff != 0) {
+                return logDiff;
+            }
+
+            return s1.substring(0, s1Space).compareTo(s2.substring(0, s2Space));
+        });
+
 
 
         pw.flush();
         pw.close();
         sc.close();
     }
+
+    private static int gcd(int a, int b) {
+        if(b == 0){
+            return a;
+        }
+        return gcd (b, a % b);
+    }
+
 
     @Override
     public String toString() {

@@ -227,7 +227,7 @@ public class DataStructure {
         pw.println((char)('z' + 1));
         LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet<>();
         linkedHashSet.iterator().hasNext();
-        String[] strings = new String[]{"ab", "cd", "vd"};
+        String[] strings = new String[]{"ab 1", "cd 2", "vd 3"};
         Arrays.sort(strings, (s1, s2) -> {
             int s1Space = s1.indexOf(" ");
             int s2Space = s2.indexOf(" ");
@@ -247,6 +247,7 @@ public class DataStructure {
 
             return s1.substring(0, s1Space).compareTo(s2.substring(0, s2Space));
         });
+        pw.println(~7);
 
 
 

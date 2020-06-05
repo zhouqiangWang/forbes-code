@@ -252,11 +252,15 @@ public class DataStructure {
         pw.println(~7);
         pw.println("string".indexOf(".", 1));
         Pair<Integer, String> pair;
-        "ss".toLowerCase();
+        "ss".equals("s");
         pw.println(String.join(" ", strings));
         pw.println("12345".substring(0,5));
-
-
+        sb = new StringBuilder("123");
+        pw.println(sb.append(sb.reverse()).toString());
+        strs = "x+5-3+x=6+x-2".split("(?=[-+])");
+        pw.println(Arrays.toString(strs));
+        pw.println(Collections.binarySearch(list, 4));
+        random.nextInt(10);
 
         pw.flush();
         pw.close();

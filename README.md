@@ -1,2 +1,2 @@
 # forbes-code
-leetcode all the time.
+leetcode all the time ^^

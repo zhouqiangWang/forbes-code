@@ -260,7 +260,7 @@ public class DataStructure {
         strs = "x+5-3+x=6+x-2".split("(?=[-+])");
         pw.println(Arrays.toString(strs));
         pw.println(Collections.binarySearch(list, 4));
-        random.nextInt(10);
+
 
         pw.flush();
         pw.close();

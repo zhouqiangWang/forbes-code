@@ -24,6 +24,7 @@ public class A_ArticulationPoints {
         }
 
         List<Integer> res = new ArrayList<>(set);
+        // test
 
         return res;
     }

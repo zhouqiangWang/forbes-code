@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.util.Calendar.MONTH;
@@ -260,7 +261,9 @@ public class DataStructure {
         strs = "x+5-3+x=6+x-2".split("(?=[-+])");
         pw.println(Arrays.toString(strs));
         pw.println(Collections.binarySearch(list, 4));
-
+        pw.println("sda".contains("."));
+        String[] ips = "1::2".split(":");
+        pw.println(ips.length);
 
         pw.flush();
         pw.close();

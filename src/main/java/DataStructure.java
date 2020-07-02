@@ -146,11 +146,11 @@ public class DataStructure {
         pw.println(1e-6);
         int i = 7;
         pw.println(" i = " + i);
-        pw.println("i(2) = " + Integer.toBinaryString(i));
-        pw.println("-i(2) = " + Integer.toBinaryString(-i));
+        pw.println("i = " + Integer.toBinaryString(i));
+        pw.println("-i = " + Integer.toBinaryString(-i));
 
         pw.println(" (-i & i) = " + (-i & i));
-        pw.println(" (-i ^ i) = " + (i ^ -i));
+        pw.println(" (-i ^ i) = " + Integer.toBinaryString(i ^ -i));
         pw.println(" Integer.MAX = " + Integer.toBinaryString(Integer.MAX_VALUE));
         pw.println(" Integer.MIN = " + Integer.toBinaryString(Integer.MIN_VALUE));
 
@@ -262,8 +262,13 @@ public class DataStructure {
         pw.println(Arrays.toString(strs));
         pw.println(Collections.binarySearch(list, 4));
         pw.println("sda".contains("."));
-        String[] ips = "1::2".split(":");
+        String[] ips = "172.16.254.1".split("\\.");
         pw.println(ips.length);
+        pw.println(ips[0]);
+        Integer.parseInt("1", 16);
+        double sqrt = Math.sqrt(24);
+        List<Long> listLong = new ArrayList<>();
+
 
         pw.flush();
         pw.close();

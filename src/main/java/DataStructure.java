@@ -7,6 +7,8 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import static java.util.Calendar.MONTH;
@@ -268,7 +270,27 @@ public class DataStructure {
         Integer.parseInt("1", 16);
         double sqrt = Math.sqrt(24);
         List<Long> listLong = new ArrayList<>();
-
+        ArrayList<Integer> l1 = new ArrayList<>(Arrays.asList(1, 1));
+        List<Integer> l3 = Arrays.asList(1, 1);
+        ArrayList<Integer> l2 = new ArrayList<>(Arrays.asList(0, 32));
+        HashSet<ArrayList<Integer>> set1 = new HashSet<>();
+        set1.add(l1);
+        pw.println(set1.contains(l2));
+        pw.println(set1.add(l2));
+//        pw.println(set1.add(l3));
+        pw.println(set1.size());
+        pw.println(l1.hashCode() == l2.hashCode());
+        pw.println(l1.hashCode() + ", " + l2.hashCode());
+        pw.println("123".indexOf("4"));
+        Pattern pattern = Pattern.compile("Already exists: Addresses\\((.+)\\)");
+        Matcher match = pattern.matcher("generic::ALREADY_EXISTS: Already exists: Addresses" +
+                "({50c0c464-471c-4a43-a5cd-9b4308ce024c}).;" +
+                " at");
+        if (match.find()) {
+            pw.println(match.group(1));
+            pw.println(match.group(0));
+        }
+        pw.println(set.iterator().next());
 
         pw.flush();
         pw.close();

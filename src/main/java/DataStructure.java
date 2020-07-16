@@ -290,7 +290,10 @@ public class DataStructure {
             pw.println(match.group(1));
             pw.println(match.group(0));
         }
+        set.add(4);
         pw.println(set.iterator().next());
+        pw.println(Integer.toBinaryString(1 << 8));
+        Deque<Integer> stack2 = new ArrayDeque<>();
 
         pw.flush();
         pw.close();

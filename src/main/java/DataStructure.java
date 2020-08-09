@@ -27,7 +27,6 @@ public class DataStructure {
 //        Scanner sc = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
 //        PrintWriter pw = new PrintWriter(new FileWriter(FILE_OUTPUT));
         PrintWriter pw = new PrintWriter(System.out);
-
         Map<Character, Integer> map = new HashMap<>();
 
         SortedSet<Map.Entry<Character, Integer>> sortedSet = new TreeSet<>((o1, o2) -> o2.getValue() - o1.getValue());
@@ -146,7 +145,7 @@ public class DataStructure {
         pw.println(builder2.toString());
         builder2.deleteCharAt(builder2.length() - 1);
         pw.println(1e-6);
-        int i = 7;
+        int i = 5;
         pw.println(" i = " + i);
         pw.println("i = " + Integer.toBinaryString(i));
         pw.println("-i = " + Integer.toBinaryString(-i));
@@ -293,7 +292,17 @@ public class DataStructure {
         set.add(4);
         pw.println(set.iterator().next());
         pw.println(Integer.toBinaryString(1 << 8));
-        Deque<Integer> stack2 = new ArrayDeque<>();
+
+        Map<String, List<String>> mapString = new HashMap<>();
+        mapString.put("", Arrays.asList(""));
+        map.computeIfAbsent('c', (k) -> k - 'a');
+
+        list.clear();
+        list.add(1);
+        list.add(3);
+        list.add(5);
+        pw.println(Collections.binarySearch(list, 6));
+
 
         pw.flush();
         pw.close();

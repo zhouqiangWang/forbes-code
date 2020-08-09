@@ -1,12 +1,11 @@
 import java.io.PrintWriter;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Semaphore;
+import java.util.concurrent.*;
 
 import static java.lang.System.exit;
 
 public class Concurrent {
     Semaphore semaphore0 = new Semaphore(1);
+    BlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue(10, true);
 
     synchronized void consumer () {
         System.out.println(Thread.currentThread().getName());

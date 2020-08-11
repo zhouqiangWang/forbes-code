@@ -302,6 +302,12 @@ public class DataStructure {
         list.add(3);
         list.add(5);
         pw.println(Collections.binarySearch(list, 6));
+        List list2 = new ArrayList();
+        list2.add("s");
+        list2.add(2);
+
+        pw.println(list2.get(0) instanceof String);
+        pw.println(list2.get(1) instanceof Integer);
 
 
         pw.flush();

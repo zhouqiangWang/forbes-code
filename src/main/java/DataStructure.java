@@ -3,6 +3,7 @@ import com.sun.tools.javac.util.Pair;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
+import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -17,7 +18,7 @@ public class DataStructure {
     private static final String FILE_INPUT = System.getProperty("user.dir") + "/src/main/java/input.txt";
     private static final String FILE_OUTPUT = "output.txt";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
         Scanner sc = null;
         try {
             sc = new Scanner(new FileReader(FILE_INPUT));

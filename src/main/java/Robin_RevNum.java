@@ -31,10 +31,32 @@ public class Robin_RevNum {
         return res;
     }
 
+    int revNumTail0(int n) {
+        int tail0 = 1;
+        while (n % 10 == 0) {
+            n /= 10;
+            tail0 *= 10;
+        }
+        int res = 0;
+
+        while (n > 0) {
+            res = res * 10 + n % 10;
+            n /= 10;
+        }
+
+        res = res * tail0;
+
+        return res;
+    }
+
     public static void main(String[] args) {
         int[] arr = {1, 20, 2, 11};
         Robin_RevNum ins = new Robin_RevNum();
         pw.println(ins.oppositeSums(arr));
+
+        pw.println(ins.revNumTail0(12300));
+        pw.println(ins.revNumTail0(12304));
+        pw.println(ins.revNumTail0(12340));
 
         pw.flush();
         pw.close();

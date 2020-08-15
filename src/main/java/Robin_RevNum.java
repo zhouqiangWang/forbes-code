@@ -49,6 +49,18 @@ public class Robin_RevNum {
         return res;
     }
 
+    int countDivider(int n, int k) {
+        String str = String.valueOf(n);
+        int res = 0;
+        for (int i = 0; i <= str.length() - k; i++) {
+            int sub = Integer.parseInt(str.substring(i, i + k));
+            if (n % sub == 0) {
+                res ++;
+            }
+        }
+        return res;
+    }
+
     public static void main(String[] args) {
         int[] arr = {1, 20, 2, 11};
         Robin_RevNum ins = new Robin_RevNum();
@@ -57,6 +69,8 @@ public class Robin_RevNum {
         pw.println(ins.revNumTail0(12300));
         pw.println(ins.revNumTail0(12304));
         pw.println(ins.revNumTail0(12340));
+
+        pw.println(ins.countDivider(120, 2));
 
         pw.flush();
         pw.close();

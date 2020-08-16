@@ -92,7 +92,11 @@ public class DataStructure {
         map.keySet();
         list.sort(((o1, o2) -> o1 - o2));
         TreeMap<Integer, Integer> treeMap = new TreeMap<>(Comparator.comparingInt(a2 -> a2));
-        treeMap.floorEntry(1);
+        treeMap.put(10, 100);
+        treeMap.put(0, 80);
+        treeMap.put(2, 200);
+        pw.println(treeMap);
+        pw.println(treeMap.floorEntry(1));
         TreeMap<Integer, Integer>[] array = new TreeMap[10];
 
         Collections.reverse(list);
@@ -330,3 +334,16 @@ public class DataStructure {
     }
 }
 
+class LRUCache<K, V> extends LinkedHashMap<K, V> {
+    private int cacheSize;
+
+    public LRUCache(int cacheSize) {
+        super(16, 0.75f, true);
+        this.cacheSize = cacheSize;
+    }
+
+    @Override
+    protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
+        return size() >= cacheSize;
+    }
+}

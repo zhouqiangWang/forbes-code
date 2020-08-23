@@ -310,10 +310,21 @@ public class DataStructure {
         List list2 = new ArrayList();
         list2.add("s");
         list2.add(2);
-
         pw.println(list2.get(0) instanceof String);
         pw.println(list2.get(1) instanceof Integer);
 
+        pw.println("abc".indexOf("b"));
+        pw.println("abc".indexOf("d"));
+        str.startsWith("");
+        treeMap.clear();
+        treeMap.put(1, 10);
+        treeMap.put(3, 20);
+        treeMap.put(5, 30);
+        pw.println(treeMap.higherKey(1));
+        pw.println(treeMap.ceilingKey(1));
+        pw.println(treeMap.higherKey(5));
+        pw.println(treeMap.ceilingKey(5));
+        pw.println(treeMap.ceilingKey(6));
 
         pw.flush();
         pw.close();

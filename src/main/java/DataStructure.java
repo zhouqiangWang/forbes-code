@@ -326,6 +326,14 @@ public class DataStructure {
         pw.println(treeMap.ceilingKey(5));
         pw.println(treeMap.ceilingKey(6));
 
+        pw.println(Math.log(10) / Math.log(7));
+
+        i = 5;
+        while (i < 16) {
+            i += i & (-i);
+            pw.println("i = " + i);
+        }
+
         pw.flush();
         pw.close();
         sc.close();

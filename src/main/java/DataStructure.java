@@ -3,11 +3,9 @@ import com.sun.tools.javac.util.Pair;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
-import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -332,6 +330,27 @@ public class DataStructure {
         while (i < 16) {
             i += i & (-i);
             pw.println("i = " + i);
+        }
+        List<Object> objects = new ArrayList<>();
+        objects.add(list);
+        objects.add(str);
+        objects.add(arr);
+        objects.add(12);
+
+        for (Object o : objects) {
+            pw.println(o.getClass().getTypeName());
+            if (o instanceof String) {
+                pw.println("String = " + o);
+            }
+            if (o instanceof List) {
+                pw.println("List.size = " + ((List)o).size());
+            }
+            if (o instanceof int[]) {
+                pw.println("Array.length = " + ((int[])o).length);
+            }
+            if (o instanceof Integer) {
+                pw.println("Integer = " + ((Integer) o).intValue());
+            }
         }
 
         pw.flush();

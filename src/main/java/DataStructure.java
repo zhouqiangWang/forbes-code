@@ -89,7 +89,7 @@ public class DataStructure {
         int b = Integer.MIN_VALUE;
         map.keySet();
         list.sort(((o1, o2) -> o1 - o2));
-        TreeMap<Integer, Integer> treeMap = new TreeMap<>(Comparator.comparingInt(a2 -> a2));
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>((a1, a2) -> a2 - a1);
         treeMap.put(10, 100);
         treeMap.put(0, 80);
         treeMap.put(2, 200);
@@ -352,6 +352,12 @@ public class DataStructure {
                 pw.println("Integer = " + ((Integer) o).intValue());
             }
         }
+        String[] v1 = "1.2".split("\\.");
+        pw.println(Arrays.toString(v1));
+
+//        char[] chars = new char[]{'1', 'b'};
+//        pw.println(Arrays.stream(chars).boxed().collect(Collectors.toList()));
+        pw.println(Arrays.stream(arr).boxed().collect(Collectors.toList()));
 
 
         pw.flush();

@@ -358,6 +358,13 @@ public class DataStructure {
 //        char[] chars = new char[]{'1', 'b'};
 //        pw.println(Arrays.stream(chars).boxed().collect(Collectors.toList()));
         pw.println(Arrays.stream(arr).boxed().collect(Collectors.toList()));
+        int[][] m = new int[2][3];
+        for (int ii = 0; ii < m.length; ii++) {
+            for (int jj = 0; jj < m[0].length; jj++) {
+                m[ii][jj] = ii * m.length + jj;
+            }
+        }
+        pw.println(Arrays.deepToString(m));
 
 
         pw.flush();

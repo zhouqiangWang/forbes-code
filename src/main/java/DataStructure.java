@@ -366,6 +366,8 @@ public class DataStructure {
         }
         pw.println(Arrays.deepToString(m));
 
+        String err = "";
+
 
         pw.flush();
         pw.close();

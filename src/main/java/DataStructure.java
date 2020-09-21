@@ -1,5 +1,3 @@
-import com.sun.tools.javac.util.Pair;
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
@@ -256,7 +254,6 @@ public class DataStructure {
         });
         pw.println(~7);
         pw.println("string".indexOf(".", 1));
-        Pair<Integer, String> pair;
         "ss".equals("s");
         pw.println(String.join(" ", strings));
         pw.println("12345".substring(0,5));

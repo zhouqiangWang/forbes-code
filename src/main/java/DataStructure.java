@@ -363,7 +363,9 @@ public class DataStructure {
         }
         pw.println(Arrays.deepToString(m));
 
-        String err = "";
+        List<String> stringList = Arrays.asList("abc", "bcd", "cde", "def");
+        pw.println(stringList);
+        pw.println(Arrays.toString(stringList.toArray(new String[1])));
 
 
         pw.flush();

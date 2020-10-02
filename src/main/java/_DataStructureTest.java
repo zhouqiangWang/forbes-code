@@ -105,6 +105,7 @@ public class _DataStructureTest {
 
         Deque<Integer> deque = new ArrayDeque<>();
 //        deque.pollFirst();
+//        throw new UnsupportedOperationException("");
 
         pw.println(-112 % 10);
 

@@ -103,6 +103,11 @@ public class _DataStructureTest {
         Map<String, Queue<String>> rels = new HashMap<>();
         rels.computeIfAbsent("key", k -> new LinkedList<>()).add("c");
 
+        Deque<Integer> deque = new ArrayDeque<>();
+//        deque.pollFirst();
+
+        pw.println(-112 % 10);
+
         pw.flush();
         pw.close();
     }

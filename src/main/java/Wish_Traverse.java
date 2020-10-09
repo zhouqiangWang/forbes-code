@@ -125,9 +125,6 @@ public class Wish_Traverse {
         pw.println(Arrays.binarySearch(num, 3));
 
         Wish_Traverse sol = new Wish_Traverse();
-        "as".toCharArray();
-        Map<String, Character> map = new HashMap<>();
-//        map.keySet()
 
         // int[][] edges = new int[][]{{0,2,500},{0,1,100},{1,2,100}};
         int[][] edges = new int[][]{{1,2,10},{2,0,7},{1,3,8},{4,0,10},{3,4,2},{4,2,10},{0,3,3},{3,1,6},{2,4,5}};
@@ -145,7 +142,13 @@ public class Wish_Traverse {
          cost: 3 + 2
          0 - 3 - 4
          */
+        TreeMap<Integer, Integer> map = new TreeMap<>();
+        map.put(0, 0);
+        map.put(2, 2);
+        map.put(4, 4);
+        map.put(6, 6);
 
+        pw.println(map.floorKey(2));
         pw.println(sol.find_cheapest_price(edges, 0, 4, 1));
 
         pw.println(sol.minimumOneBitOperations(3));

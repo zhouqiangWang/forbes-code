@@ -107,6 +107,7 @@ public class _DataStructureTest {
 //        deque.pollFirst();
 //        throw new UnsupportedOperationException("");
 
+
         pw.println(-112 % 10);
 
         pw.flush();

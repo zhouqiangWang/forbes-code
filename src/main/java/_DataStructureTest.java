@@ -106,6 +106,16 @@ public class _DataStructureTest {
         Deque<Integer> deque = new ArrayDeque<>();
 //        deque.pollFirst();
 //        throw new UnsupportedOperationException("");
+        Comparator<Integer> comparator = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return 0;
+            }
+
+        };
+        int[] arr  = {1, 2};
+        int i = 0;
+        Arrays.stream(arr).boxed().sorted(comparator).collect(Collectors.toList());
 
 
         pw.println(-112 % 10);

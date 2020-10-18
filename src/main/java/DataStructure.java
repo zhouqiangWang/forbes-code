@@ -297,11 +297,6 @@ public class DataStructure {
         mapString.put("", Arrays.asList(""));
         map.computeIfAbsent('c', (k) -> k - 'a');
 
-        list.clear();
-        list.add(1);
-        list.add(3);
-        list.add(5);
-        pw.println(Collections.binarySearch(list, 6));
         List list2 = new ArrayList();
         list2.add("s");
         list2.add(2);
@@ -366,6 +361,15 @@ public class DataStructure {
         List<String> stringList = Arrays.asList("abc", "bcd", "cde", "def");
         pw.println(stringList);
         pw.println(Arrays.toString(stringList.toArray(new String[1])));
+
+
+        list.clear();
+        list.add(1);
+        list.add(3);
+        list.add(5);
+        pw.println(Collections.binarySearch(list, 3));
+        pw.println(Collections.binarySearch(list, 4));
+        pw.println(Collections.binarySearch(list, 6));
 
 
         pw.flush();

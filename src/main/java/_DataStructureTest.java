@@ -116,7 +116,7 @@ public class _DataStructureTest {
         int[] arr  = {1, 2};
         int i = 0;
         Arrays.stream(arr).boxed().sorted(comparator).collect(Collectors.toList());
-
+        
 
         pw.println(-112 % 10);
 

@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class LT_TextJustification {
                     break;
                 }
             }
-            res.add(justify(words, i, r, maxWidth, size));
+            res.add(justify(words, i, r - 1, maxWidth, size));
             i = r;
         }
 
@@ -26,14 +27,45 @@ public class LT_TextJustification {
 
     private String justify(String[] words, int l, int r, int maxWidth, int size) {
         StringBuilder sb = new StringBuilder();
+        if (r == words.length - 1 || r == l) {
+            // Last line or only single word in a line, use left justified.
+            sb.append(words[l]);
+            for (int i = l + 1; i <= r; i++) {
+                sb.append(' ');
+                sb.append(words[i]);
+            }
+            for (int i = size + 1; i <= maxWidth; i++) {
+                sb.append(' ');
+            }
+            return sb.toString();
+        }
 
-        int gap = (maxWidth - size) / (r - l - 1);
-        int oneMore = (maxWidth - size) % (r - l - 1);
+        // center justified.
+        int gap = (maxWidth - size) / (r - l);
+        int oneMore = (maxWidth - size) % (r - l);
         sb.append(words[l]);
+        for (int i = l + 1; i <= r; i++) {
+            sb.append(' ');
+            for (int j = 0; j < gap; j++) {
+                sb.append(' ');
+            }
+            if (oneMore-- > 0) {
+                sb.append(' ');
+            }
+            sb.append(words[i]);
+        }
+
         return sb.toString();
     }
 
     public static void main(String[] args) {
+        PrintWriter pw = new PrintWriter(System.out);
+        LT_TextJustification ins = new LT_TextJustification();
 
+        String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
+        pw.println(ins.fullJustify(words, 16));
+
+        pw.flush();
+        pw.close();
     }
 }

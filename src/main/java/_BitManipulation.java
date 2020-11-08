@@ -1,4 +1,5 @@
 import java.io.PrintWriter;
+import java.util.TreeMap;
 
 public class _BitManipulation {
     /**
@@ -59,6 +60,14 @@ public class _BitManipulation {
         pw.println(Integer.toBinaryString(Integer.MIN_VALUE >> 2));
         pw.println(Integer.toBinaryString(Integer.MIN_VALUE >>> 2));
         pw.println(Integer.toBinaryString(Integer.MAX_VALUE >> 2));
+
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
+        treeMap.put(1, 100);
+        treeMap.put(2, 200);
+        treeMap.put(4, 400);
+        pw.println(treeMap.floorKey(0));
+        pw.println("floorKey(2) = " + treeMap.floorKey(2));
+        pw.println(treeMap.floorKey(3));
 
         pw.flush();
         pw.close();

@@ -1,4 +1,6 @@
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.TreeMap;
 
 public class _BitManipulation {
@@ -68,6 +70,7 @@ public class _BitManipulation {
         pw.println(treeMap.floorKey(0));
         pw.println("floorKey(2) = " + treeMap.floorKey(2));
         pw.println(treeMap.floorKey(3));
+        Map<Long, Integer> preSum = new HashMap<>();
 
         pw.flush();
         pw.close();

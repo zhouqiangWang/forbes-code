@@ -12,6 +12,8 @@ public class CompassStringMapping {
         while (matcher.find()) {
             String key = matcher.group(1);
             System.out.println(key);
+            System.out.println(matcher.start());
+            System.out.println(matcher.end());
         }
         return sentence;
     }

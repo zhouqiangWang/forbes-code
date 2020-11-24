@@ -24,7 +24,7 @@ public class _DataStructureTest {
         Arrays.stream(arr).boxed().sorted(comparator).collect(Collectors.toList());
 
         pw.println(-112 % 10);
-        List<Integer> list = Arrays.asList(0, 1, 2, 3);
+        List<Integer> list = Arrays.asList(0, 1, 3, 5);
         pw.println(list.subList(1, 3));
 
         _DataStructureTest ins = new _DataStructureTest();
@@ -33,6 +33,14 @@ public class _DataStructureTest {
         List<Integer> singleList = Collections.singletonList(2);
 //        singleList.add(3); immutable
         pw.println(singleList);
+        String[] strs = new String[]{"2", "9", "3"};
+        List<Integer> list2 =
+                Arrays.stream(strs).map(Integer::valueOf).sorted().collect(Collectors.toList());
+
+        pw.println(list2);
+        pw.println(String.join("", strs));
+        pw.println(Collections.binarySearch(list, 2));
+        pw.println(Character.isDigit('1'));
 
         pw.flush();
         pw.close();

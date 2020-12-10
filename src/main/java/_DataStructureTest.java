@@ -41,6 +41,8 @@ public class _DataStructureTest {
         pw.println(String.join("", strs));
         pw.println(Collections.binarySearch(list, 2));
         pw.println(Character.isDigit('1'));
+        int int_val = 10_000;
+        pw.println(int_val);
 
         pw.flush();
         pw.close();

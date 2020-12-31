@@ -20,6 +20,7 @@ public class _DataStructureTest {
             }
 
         };
+
         int[] arr  = {1, 2};
         Arrays.stream(arr).boxed().sorted(comparator).collect(Collectors.toList());
 

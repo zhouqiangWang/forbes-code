@@ -18,6 +18,12 @@ public class _BitManipulation {
         return -i & i;
     }
 
+    static void swap() {
+        int a = 1, b = 2;
+        a = a ^ b ^ (b = a);
+        System.out.println("a = " + a + ", b = " + b);
+    }
+
     static int countSetBits(int x){
         int count = 0;
         while (x != 0) {
@@ -71,6 +77,8 @@ public class _BitManipulation {
         pw.println("floorKey(2) = " + treeMap.floorKey(2));
         pw.println(treeMap.floorKey(3));
         Map<Long, Integer> preSum = new HashMap<>();
+
+        swap();
 
         pw.flush();
         pw.close();

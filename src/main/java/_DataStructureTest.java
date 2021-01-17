@@ -44,6 +44,8 @@ public class _DataStructureTest {
         pw.println(Character.isDigit('1'));
         int int_val = 10_000;
         pw.println(int_val);
+        Random random = new Random();
+        random.nextInt(10);
 
         pw.flush();
         pw.close();

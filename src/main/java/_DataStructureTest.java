@@ -47,6 +47,16 @@ public class _DataStructureTest {
         Random random = new Random();
         random.nextInt(10);
 
+        var a = 1;
+        var b = Integer.valueOf(10);
+        var c = true;
+        var d = "sa";
+        pw.println(b.getClass());
+        pw.println(d.getClass());
+
+        int[] arr2 = list.stream().mapToInt(i -> i).toArray();
+        pw.println(Arrays.toString(arr2));
+
         pw.flush();
         pw.close();
     }

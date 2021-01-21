@@ -23,6 +23,5 @@
 hs_err_pid*
 
 .idea/*
-*/target/*
-target/maven-status/*
-target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+src/main/java/.DS_Store
+target/**

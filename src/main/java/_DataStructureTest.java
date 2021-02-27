@@ -57,6 +57,10 @@ public class _DataStructureTest {
         int[] arr2 = list.stream().mapToInt(i -> i).toArray();
         pw.println(Arrays.toString(arr2));
 
+        Iterable<String> lines = () -> "this\nthat\nthe_other".lines().iterator();
+        lines.forEach(pw::println);
+        pw.println(String.join("\n", lines));
+
         pw.flush();
         pw.close();
     }

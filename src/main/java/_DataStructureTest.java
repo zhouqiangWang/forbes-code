@@ -56,6 +56,8 @@ public class _DataStructureTest {
 
         int[] arr2 = list.stream().mapToInt(i -> i).toArray();
         pw.println(Arrays.toString(arr2));
+        Integer[] arr3 = new Integer[]{1, 2 ,3};
+        Arrays.sort(arr3, (a1, a2) -> a2 - a1);
 
         Iterable<String> lines = () -> "this\nthat\nthe_other".lines().iterator();
         lines.forEach(pw::println);

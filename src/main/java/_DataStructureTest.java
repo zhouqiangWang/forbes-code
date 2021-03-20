@@ -62,6 +62,10 @@ public class _DataStructureTest {
         Iterable<String> lines = () -> "this\nthat\nthe_other".lines().iterator();
         lines.forEach(pw::println);
         pw.println(String.join("\n", lines));
+        List<List<Integer>> forwardList = new ArrayList<>();
+        forwardList.sort(Comparator.comparingInt(a1 -> a1.get(1)));
+        Arrays.asList();
+
 
         pw.flush();
         pw.close();

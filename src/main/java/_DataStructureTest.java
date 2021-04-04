@@ -65,6 +65,14 @@ public class _DataStructureTest {
         List<List<Integer>> forwardList = new ArrayList<>();
         forwardList.sort(Comparator.comparingInt(a1 -> a1.get(1)));
         Arrays.asList();
+        Map<Integer, Set<Integer>> map2 = new HashMap<>();
+        map2.computeIfAbsent(1, k -> new HashSet<>()).add(2);
+        for (Map.Entry<Integer, Set<Integer>> entry : map2.entrySet()) {
+            entry.getValue();
+        }
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
+        Set<Integer> set = new HashSet<>();
+        pw.println(Arrays.asList(arr));
 
 
         pw.flush();

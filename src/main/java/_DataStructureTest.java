@@ -74,8 +74,40 @@ public class _DataStructureTest {
         Set<Integer> set = new HashSet<>();
         pw.println(Arrays.asList(arr));
 
+        PriorityQueue<String> minHeap = new PriorityQueue<>((s1, s2) -> s1.compareTo(s2));
+        minHeap.add("love");
+        minHeap.add("i");
+
+        pw.println(minHeap.peek());
+
+        pw.println(map.get("a"));
 
         pw.flush();
         pw.close();
+    }
+
+
+    enum Day{
+        MONDAY("Mon"), TUESDAY("Tu");
+
+        private static final Map<String, Day> LOOK_UP = new HashMap<>();
+        static {
+            for (Day d: Day.values()) {
+                LOOK_UP.put(d.getAbbr(), d);
+            }
+        }
+
+        private String abbr;
+        Day(String abbr) {
+            this.abbr = abbr;
+        }
+
+        public String getAbbr() {
+            return abbr;
+        }
+
+        public static Day fromAb(String ab) {
+            return LOOK_UP.get(ab);
+        }
     }
 }

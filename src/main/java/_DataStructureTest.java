@@ -81,6 +81,10 @@ public class _DataStructureTest {
         pw.println(minHeap.peek());
 
         pw.println(map.get("a"));
+        pw.println(Day.EMPTY.getAbbr());
+        Optional<Integer> optional = Optional.empty();
+
+        optional.ifPresent((id) -> map.put("test", id));
 
         pw.flush();
         pw.close();
@@ -88,7 +92,7 @@ public class _DataStructureTest {
 
 
     enum Day{
-        MONDAY("Mon"), TUESDAY("Tu");
+        MONDAY("Mon"), TUESDAY("Tu"), EMPTY("");
 
         private static final Map<String, Day> LOOK_UP = new HashMap<>();
         static {

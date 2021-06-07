@@ -42,7 +42,8 @@ public class AsyncGeoAPI {
                 .thenApply(resList -> resList.stream()
                         .map(response -> response.body().getResults()[0].getGeometry().getLocation())
                         .collect(Collectors.toList()))
-                .thenApply(locations -> geoAPI.getDistance(locations.get(0),locations.get(1))).thenApply(future -> {
+                .thenApply(locations -> geoAPI.getDistance(locations.get(0),locations.get(1)))
+                .thenApply(future -> {
                     try {
                         return future.get();
                     } catch (InterruptedException e) {

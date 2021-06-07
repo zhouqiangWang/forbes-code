@@ -50,7 +50,7 @@ public class AsyncGeoAPI {
                     } catch (ExecutionException e) {
                         e.printStackTrace();
                     }
-                    return CompletableFuture.completedFuture(null);
+                    return null;
                 });
 
 //        Location originalGeo = responseFuture1.get().body().getResults()[0].getGeometry().getLocation();

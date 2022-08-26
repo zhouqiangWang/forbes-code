@@ -85,6 +85,7 @@ public class _DataStructureTest {
         Optional<Integer> optional = Optional.empty();
 
         optional.ifPresent((id) -> map.put("test", id));
+        list.subList(0, 1);
 
         pw.flush();
         pw.close();

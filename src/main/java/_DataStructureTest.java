@@ -5,6 +5,8 @@ import java.util.stream.Collectors;
 public class _DataStructureTest {
     public static void main(String[] args) {
         PrintWriter pw = new PrintWriter(System.out);
+        String str = "特";
+        pw.println(str.length() + ", bytesLength = " + str.getBytes().length);
         pw.println("123".indexOf('.'));
 
         Map<String, Queue<String>> rels = new HashMap<>();

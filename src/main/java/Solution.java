@@ -7,7 +7,7 @@ import java.math.BigInteger;
 import java.util.*;
 
 public class Solution {
-    private static final String FILE_INPUT = System.getProperty("user.dir") + "/src/input.txt";
+    private static final String FILE_INPUT = System.getProperty("user.dir") + "/src/main/java/input.txt";
     private static final String FILE_OUTPUT = "output.txt";
 
     @Override
